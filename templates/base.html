@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <title>{% block title %} {{ title }} {% endblock %}</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- Створення хедеру. -->
+        <header>    
+            <div class="navbar">
+                {% if current_user.is_authentificated %}
+                    <ul class="nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/log-out">Log Out</a>
+                        </li>
+                    </ul>
+
+                {% else %}
+                    <ul class="nav-pills">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Log in</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signup">Sign Up</a>
+                        </li>
+                    </ul>
+
+                {% endif %}
+            </div>
+        </header>
+
+        <div class="container-content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <!-- Створення футеру. -->
+        <div class="container">
+            <footer>
+                <div class="content-top">
+                    <a class="icon-link" href="/"><i class="fa-solid fa-house fa-xl" style="color: #000000;"></i></a>
+                    <span class="span-text">© 2024 Company, Inc</span>
+                </div>
+
+                <div class="content-bottom">
+                    <a class="icon-link" href="#"><i class="fa-brands fa-instagram fa-xl" style="color: #000000;"></i></a>
+                    <a class="icon-link" href="#"><i class="fa-brands fa-telegram fa-xl" style="color: #000000;"></i></a>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+    
+
+
+    <script src="https://kit.fontawesome.com/afcda73a6d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

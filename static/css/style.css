@@ -1,0 +1,84 @@
+                                                /* General */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+
+
+                                                /* Navbar */
+
+.navbar {
+    background-color: #eee;
+}
+
+
+.nav-pills {
+    width: 100%;
+    border: 1px solid #e7e7e7;
+}
+
+
+.nav-item {
+    display: inline;
+    float: left;
+    border: 1px solid #eee;
+}
+
+
+.nav-link {
+    color: #ffffff;
+    padding: 20px 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-link:hover {
+    background-color: #000;
+    color: #eee;
+    border-radius: 4px;
+}
+
+
+                                                    /* Content */
+.container-content {
+    flex: 1;
+    background-color: #eee;
+    text-align: center;
+}
+
+
+
+                                                    /* Footer */
+
+.span-text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.content-top {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.content-bottom {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.icon-link {
+    padding: 4px;
+}
