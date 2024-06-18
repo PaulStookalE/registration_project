@@ -1,4 +1,4 @@
-from .. import app, login_manager
+from . import app, login_manager
 from flask import render_template, redirect, flash
 from .forms import LoginForm, RegisterForm
 from .database import User, session
@@ -28,7 +28,7 @@ def register():
         username = form.username.data
 
 
-        user = session.query(User).where(User.username == username)
+        user = session.query(User).where(User.username == username).first()
         # Перевірка чи не існує такий користувач з таким нікнеймом у БД.
         if user:
             # Якщо існує -- надсилання модального вікна з проханням спробувати увійти з цим ім'ям чи спробувати зареєструватися з інишим нікнеймом.
